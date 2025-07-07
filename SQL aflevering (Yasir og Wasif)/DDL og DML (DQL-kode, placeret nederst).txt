@@ -1,0 +1,1107 @@
+DROP TABLE IF EXISTS SpillerSom;
+DROP TABLE IF EXISTS Fodboldspiller;
+DROP TABLE IF EXISTS Traener;
+DROP TABLE IF EXISTS Klub;
+DROP TABLE IF EXISTS Praesident;
+DROP TABLE IF EXISTS Nationalitet;
+DROP TABLE IF EXISTS Alder;
+DROP TABLE IF EXISTS Position;
+DROP TABLE IF EXISTS Agent;
+
+-- 1) AGENT
+CREATE TABLE Agent (
+  aId     SERIAL PRIMARY KEY,
+  aNavn   VARCHAR(255) NOT NULL
+);
+INSERT INTO Agent (aId, aNavn) VALUES
+  (1,  'BMS Sportconsulting'),
+  (2,  'CAA Stellar'),
+  (3,  'Velasco Sport Group'),
+  (4,  'Grand Stand'),
+  (5,  'Sports360 GmbH'),
+  (6,  'LUPUS'),
+  (7,  'Boilesen Management'),
+  (8,  'GOLDBAEK SPORT GmbH'),
+  (9,  'Vibra Futbol'),
+  (10, 'AmEro Sports'),
+  (11, 'Bene-Sport'),
+  (12, 'NextPro'),
+  (13, 'People In Sport'),
+  (14, 'Elite Consulting'),
+  (15, 'Elite Sports Management Ltd.'),
+  (16, 'CMA Group'),
+  (17, 'PROSPORT Management'),
+  (18, 'EM Sports Consulting'),
+  (19, 'Universal Twenty Two'),
+  (20, 'CAA Base Ltd'),
+  (21, 'CLS Mundial'),
+  (22, 'HCM Sports Management'),
+  (23, 'Boutique Transfers and Management ApS'),
+  (24, 'MD Management'),
+  (25, 'Players Promotion'),
+  (26, 'Nine Group'),
+  (27, 'Utmostt'),
+  (28, 'MDC Advisors'),
+  (29, 'Apertura Sports GmbH'),
+  (30, 'LINK SPORTS'),
+  (31, 'BTAM'),
+  (32, 'ONEANDTEN'),
+  (33, 'Nordic Sky'),
+  (34, 'Int. Sport …'),
+  (35, 'Sferico Sports …'),
+  (36, 'Seth Sports'),
+  (37, 'Aya Sport'),
+  (38, 'SEG'),
+  (39, 'UNOSPORTS'),
+  (40, 'VSR Assessoria'),
+  (41, 'All Iron Sports'),
+  (42, 'P&P Sport'),
+  (43, 'Solbakken / Player Solution'),
+  (44, 'BHM Sports Agency'),
+  (45, 'Stirr Associates'),
+  (46, 'Beckster Int.'),
+  (47, 'Wasserman'),
+  (48, 'Niagara Sports Company'),
+  (49, 'Sarcle Co. Ltd.'),
+  (50, 'Vision-Agency'),
+  (51, 'ROOF'),
+  (52, 'Aarnikko Sports Management'),
+  (53, 'Select Sports Management LLC'),
+  (54, 'Relatives'),
+  (55, 'SBE Management AG'),
+  (56, 'BLACKSKILL'),
+  (57, 'Keypass AS'),
+  (58, 'PEP Consulting'),
+  (59, 'David Driscoll'),
+  (60, 'MSC GROUP'),
+  (61, 'FMA Sports'),
+  (62, 'Olé Sport & Business'),
+  (63, 'NG9'),
+  (64, 'LEAD Football'),
+  (65, 'GloBall Group'),
+  (66, 'BWM Fodbold'),
+  (67, 'ROOF Talents'),
+  (68, 'FERGIETIME'),
+  (69, 'NSM'),
+  (70, 'SSG'),
+  (71, 'ICON MGMT'),
+  (72, 'Forza Sports Group'),
+  (73, 'NSG ApS'),
+  (74, 'First Artist Scandinavia A/S'),
+  (75, 'Signature – ISCM AG'),
+  (76, 'PRO FC'),
+  (77, 'MB Sports'),
+  (78, 'Bak Agency'),
+  (79, 'KVD Player Agency'),
+  (80, 'YOU FIRST'),
+  (81, 'Alfaria sports GmbH'),
+  (82, 'Key United'),
+  (83, 'FPA'),
+  (84, 'Haspel Sportconsulting'),
+  (85, 'Unique Sports Group'),
+  (86, 'Agent is known – Player under 18'),
+  (87, 'Benchmark Sports'),
+  (88, 'Footballhouseplus'),
+  (89, 'Global Soccer Management'),
+  (90, 'Jim Solbakken / Player Solution'),
+  (91, 'Wesport Football'),
+  (92, 'International Dymension'),
+  (93, 'MYG Invest'),
+  (94, 'AR Sport Management'),
+  (95, '11MANGMT'),
+  (96, 'SA33'),
+  (97, 'FLM'),
+  (98, 'M-Soccermanagement'),
+  (99, 'B360 Sports'),
+  (100,'PUM'),
+  (101,'SPORTS ACTION'),
+  (102,'SCM Fortius'),
+  (103,'V4S'),
+  (104,'Arthurlegacy Sports M.L.'),
+  (105,'AKA Global GmbH'),
+  (106,'HC'),
+  (107,'Sports eXcellence Group'),
+  (108,'Match2gether'),
+  (109,'GFM'),
+  (110,'SeiSei Football'),
+  (111,'All Conti Sports'),
+  (112,'MPFC'),
+  (113,'Bond MG'),
+  (114,'Career In Football'),
+  (115,'Ingen Agenter');
+  SELECT * FROM Agent;
+
+-- 2) ALDER
+CREATE TABLE Alder (
+  alId    SERIAL PRIMARY KEY,
+  alNavn  VARCHAR(100) NOT NULL
+);
+INSERT INTO Alder (alId, alNavn) VALUES
+  (1,'1'),
+  (2,'2'),
+  (3,'3'),
+  (4,'4'),
+  (5,'5'),
+  (6,'6'),
+  (7,'7'),
+  (8,'8'),
+  (9,'9'),
+  (10,'10'),
+  (11,'11'),
+  (12,'12'),
+  (13,'13'),
+  (14,'14'),
+  (15,'15'),
+  (16,'16'),
+  (17,'17'),
+  (18,'18'),
+  (19,'19'),
+  (20,'20'),
+  (21,'21'),
+  (22,'22'),
+  (23,'23'),
+  (24,'24'),
+  (25,'25'),
+  (26,'26'),
+  (27,'27'),
+  (28,'28'),
+  (29,'29'),
+  (30,'30'),
+  (31,'31'),
+  (32,'32'),
+  (33,'33'),
+  (34,'34'),
+  (35,'35'),
+  (36,'36'),
+  (37,'37'),
+  (38,'38'),
+  (39,'39'),
+  (40,'40'),
+  (41,'41'),
+  (42,'42'),
+  (43,'43'),
+  (44,'44'),
+  (45,'45'),
+  (46,'46'),
+  (47,'47'),
+  (48,'48'),
+  (49,'49'),
+  (50,'50'),
+  (51,'51'),
+  (52,'52'),
+  (53,'53'),
+  (54,'54'),
+  (55,'55'),
+  (56,'56'),
+  (57,'57'),
+  (58,'58'),
+  (59,'59'),
+  (60,'60'),
+  (61,'61'),
+  (62,'62'),
+  (63,'63'),
+  (64,'64'),
+  (65,'65'),
+  (66,'66'),
+  (67,'67'),
+  (68,'68'),
+  (69,'69'),
+  (70,'70'),
+  (71,'71'),
+  (72,'72'),
+  (73,'73'),
+  (74,'74'),
+  (75,'75'),
+  (76,'76'),
+  (77,'77'),
+  (78,'78'),
+  (79,'79'),
+  (80,'80'),
+  (81,'81'),
+  (82,'82'),
+  (83,'83'),
+  (84,'84'),
+  (85,'85'),
+  (86,'86'),
+  (87,'87'),
+  (88,'88'),
+  (89,'89'),
+  (90,'90'),
+  (91,'91'),
+  (92,'92'),
+  (93,'93'),
+  (94,'94'),
+  (95,'95'),
+  (96,'96'),
+  (97,'97'),
+  (98,'98'),
+  (99,'99'),
+  (100,'100');
+  SELECT * FROM Alder;
+
+-- 3) POSITION
+CREATE TABLE Position (
+  poId    SERIAL PRIMARY KEY,
+  poNavn  VARCHAR(255) NOT NULL
+);
+
+INSERT INTO Position (poId, poNavn) VALUES
+	(1, 'Målmand'),
+	(2, 'Højre back'),
+	(3, 'Venstre back'),
+	(4, 'Midterforsvarer'),
+	(5, 'Højre wingback'),
+	(6, 'Venstre wingback'),
+	(7, 'Defensiv midtbanespiller'),
+	(8, 'Central midtbanespiller'),
+	(9, 'Offensiv midtbanespiller'),
+	(10, 'Højre midtbanespiller'),
+	(11, 'venstre midtbanespiller'),
+	(12, 'Højre winger'), 
+	(13, 'Venstre winger'), 
+	(14, 'Centerforward'), 
+	(15, 'Angriber');
+   SELECT * FROM Position;
+
+  
+  
+-- 4) NATIONALITET
+CREATE TABLE Nationalitet (
+  nId     SERIAL PRIMARY KEY,
+  nNavn   VARCHAR(50) NOT NULL
+);
+INSERT INTO Nationalitet (nId, nNavn) VALUES
+  ( 1, 'Danmark'),
+  ( 2, 'Sverige'),
+  ( 3, 'Norge'),
+  ( 4, 'Ghana'),
+  ( 5, 'Holland'),
+  ( 6, 'Island'),
+  ( 7, 'Tyskland'),
+  ( 8, 'USA'),
+  ( 9, 'Frankrig'),
+  (10, 'Kroatien'),
+  (11, 'Australien'),
+  (12, 'Brasilien'),
+  (13, 'Portugal'),
+  (14, 'Finland'),
+  (15, 'Nordmakedonien'),
+  (16, 'Senegal'),
+  (17, 'Slovenien'),
+  (18, 'England'),
+  (19, 'Nigeria'),
+  (20, 'Chile'),
+  (21, 'Gambia'),
+  (22, 'Japan'),
+  (23, 'Tjekkiet'),
+  (24, 'Grækenland'),
+  (25, 'Peru'),
+  (26, 'Guinea'),
+  (27, 'New Zealand'),
+  (28, 'Rusland'),
+  (29, 'Belgien'),
+  (30, 'Schweiz'),
+  (31, 'Algeriet'),
+  (32, 'Østrig'),
+  (33, 'Slovakiet'),
+  (34, 'Bosnien-Hercegovina'),
+  (35, 'Ecuador'),
+  (36, 'Mexico'),
+  (37, 'Surinam'),
+  (38, 'Zambia'),
+  (39, 'Burkina Faso'),
+  (40, 'Sydkorea'),
+  (41, 'Colombia'),
+  (42, 'Georgien'),
+  (43, 'Kazakhstan'),
+  (44, 'Tunesien'),
+  (45, 'Elfenbenskysten'),
+  (46, 'Uruguay'),
+  (47, 'Zimbabwe'),
+  (48, 'Albanien'),
+  (49, 'Cameroun'),
+  (50, 'Jamaica'),
+  (51, 'Sierra Leone'),
+  (52, 'Tanzania'),
+  (53, 'DR Congo'),
+  (54, 'Polen'),
+  (55, 'Spanien'),
+  (56, 'Tyrkiet'),
+  (57, 'Bulgarien'),
+  (58, 'Sydafrika');
+ SELECT * FROM Nationalitet;
+
+-- 5) PRAESIDENT
+CREATE TABLE Praesident (
+  pId     SERIAL PRIMARY KEY,
+  pNavn   VARCHAR(255) NOT NULL
+);
+INSERT INTO Praesident (pId, pNavn) VALUES
+  (1, 'Henrik Møgelmose'),
+  (2, 'Claus Steinlein'),
+  (3, 'Jan Bech Andersen'), 
+  (4, 'Tom Vernon'), 
+  (5, 'Kim Nielsen'), 
+  (6, 'Lars Fournais'), 
+  (7, 'Henrik Lyhne'),
+  (8, 'Jan Peters'),
+  (9, 'Henrik Jörgensen'),
+  (10, 'Tage Pedersen'), 
+  (11, 'Tommy Petersen'), 
+  (12, 'Søren Davidsen');
+ SELECT * FROM Praesident;
+ 
+
+  -- 6) KLUB
+CREATE TABLE Klub (
+  kId           SERIAL PRIMARY KEY,
+  kNavn         VARCHAR(255) NOT NULL,
+  pId INT NOT NULL,
+  FOREIGN KEY (pId) REFERENCES Praesident(pId)
+);
+INSERT INTO Klub (kId, kNavn, pId) VALUES
+  (1, 'FC København',    1),
+  (2, 'FC Midtjylland',  2),
+  (3, 'Brøndby IF',      3),
+  (4, 'Randers FC',      9),
+  (5, 'FC Nordsjælland', 4),
+  (6, 'AGF',             6),
+  (7, 'Silkeborg IF',    7),
+  (8, 'Viborg FF',       5),
+  (9, 'Sønderjyske',     12),
+  (10,'Lyngby BK',       11),
+  (11,'AaB',             8),
+  (12,'Vejle BK',        10);
+ SELECT * FROM Klub;
+
+-- 7) TRAENER
+CREATE TABLE Traener (
+  tId             INT PRIMARY KEY,
+  tNavn           VARCHAR(255) NOT NULL,
+  KlubId         INT NOT NULL,
+  NationalitetId INT NOT NULL,
+
+  FOREIGN KEY (KlubId)         REFERENCES Klub(kId), 
+  FOREIGN KEY (NationalitetId) REFERENCES Nationalitet(nId)
+);
+INSERT INTO Traener (tId, tNavn, KlubId, NationalitetId) VALUES
+  ( 1, 'Jacob Neestrup',        1, 1),
+  ( 2, 'Thomas Thomasberg',     2, 1),
+  ( 3, 'Rasmus Bertelsen',      4, 1),
+  ( 4, 'Kent Nielsen',          7, 1),
+  ( 5, 'Jens Fønsskov Olsen',   5, 1),
+  ( 6, 'Jakob Poulsen',         8, 1),
+  ( 7, 'Uwe Rösler',            6, 7),
+  ( 8, 'Thomas Nørgaard',       9, 1),
+  ( 9, 'Morten Karlsen',       10, 1),
+  (10, 'Frederik Birk',         3, 1),
+  (11, 'Steffen Kielstrup',    12, 1),
+  (12, 'Kristoffer Wichmann',  11, 1);
+ SELECT * FROM Traener;
+
+-- 8) FODBOLDSPILLER
+CREATE TABLE Fodboldspiller (
+  fId    SERIAL PRIMARY KEY,
+  fNavn  VARCHAR(255) NOT NULL,
+  alId   INT NOT NULL,
+  aId    INT NOT NULL,
+  kId    INT NOT NULL,
+  nId    INT NOT NULL,
+
+  FOREIGN KEY (alId) REFERENCES Alder(alId),
+  FOREIGN KEY (aId)  REFERENCES Agent(aId),
+  FOREIGN KEY (kId)  REFERENCES Klub(kId),
+  FOREIGN KEY (nId)  REFERENCES Nationalitet(nId)
+);
+INSERT INTO Fodboldspiller (fId, fNavn, alId, aId, kId, nId) VALUES
+  (1,  'Diant Ramaj',            23,  1,  1,  1),
+  (2,  'Nathan Trott',           26,  2,  1,  1),
+  (3,  'Rúnar Alex Rúnarsson',   30,  2,  1,  2),
+  (4,  'Gabriel Pereira',        25,  3,  1,  8),
+  (5,  'Kevin Diks',             28,  4,  1,  7),
+  (6,  'Pantelis Hatzidiakos',   28,  5,  1,  7),
+  (7,  'Munashe Garananga',      24,  6,  1, 37),
+  (8,  'Nicolai Boilesen',       33,  7,  1,  7),
+  (9,  'Birger Meling',          30,  8,  1, 18),
+  (10,  'Marcos López',          25,  9,  1, 20),
+  (11,  'Rodrigo Huescas',       21, 10,  1,  8),
+  (12,  'Giorgi Gocholeishvili', 24, 11,  1, 42),
+  (13,  'William Clem',          20, 12,  1, 18),
+  (14,  'Lukas Lerager',         31, 13,  1,  1),
+  (15,  'Victor Froholdt',       19, 14,  1,  1),
+  (16,  'Thomas Delaney',        33, 15,  1,  1),
+  (17,  'Rasmus Falk',           33, 16,  1,  1),
+  (18,  'Oliver Højer',          18, 76,  1,  1),
+  (19,  'Hunor Németh',          18, 18,  1, 18),
+  (20,  'Elias Achouri',         26, 19,  1, 18),
+  (21,  'Robert',                20, 20,  1,  8),
+  (22,  'Roony Bardghji',        19, 20,  1,  1),
+  (23,  'Mohamed Elyounoussi',   30, 21,  1,  1),
+  (24,  'Jordan Larsson',        27, 22,  1,  1),
+  (25,  'Magnus Mattsson',       26, 23,  1,  1),
+  (26,  'Viktor Claesson',       33, 24,  1,  2),
+  (27,  'Andreas Cornelius',     32, 25,  1,  1),
+  (28,  'Amin Chiakha',          19,  2,  1,  1),
+  (29,  'Elías Ólafsson',        25,  2,  2,  6),
+  (30,  'Jonas Lössl',           36, 26,  2,  1),
+  (31,  'Ovie Ejeheri',          22, 27,  2, 18),
+  (32,  'Ousmane Diao',          20, 28,  2, 16),
+  (33,  'Mads Bech Sørensen',    26, 13,  2,  1),
+  (34,  'Han-beom Lee',          22, 29,  2, 40),
+  (35,  'Paulinho',              30, 30,  2, 12),
+  (36,  'Victor Bak',            21, 31,  2,  1),
+  (37,  'Christian Sørensen',    32, 14,  2,  1),
+  (38,  'Kevin Mbabu',           30, 32,  2, 30),
+  (39,  'Joel Andersson',        28, 33,  2,  2),
+  (40,  'Adam Gabriel',          23, 34,  2,  1),
+  (41,  'Dani Silva',            25, 35,  2, 13),
+  (42,  'Oliver Sørensen',       23, 14,  2,  1),
+  (43,  'Denil Castillo',        21, 36,  2,  1),
+  (44,  'Pedro Bravo',           20, 37,  2, 41),
+  (45,  'Aral Şimşir',           22, 38,  2, 56),
+  (46,  'Mikel Gogorza',         18,115,  2, 55),
+  (47,  'Obule Moses',           21,115,  2, 19),
+  (48,  'Darío Osorio',          21, 39,  2, 20),
+  (49,  'Edward Chilufya',       24,115,  2, 38),
+  (50,  'Marrony',               28, 40,  2, 12),
+  (51,  'Valdemar Byskov',       18, 14,  2,  1),
+  (52,  'Franculino',            21, 41,  2, 12),
+  (53,  'Adam Buksa',            29, 22,  2, 54),
+  (54,  'Gue-sung Cho',          27, 42,  2, 40),
+  (55,  'Patrick Pentz',         28, 20,  3, 32),
+  (56,  'Sebastian Sebulonsen',  25, 43,  3,  3),
+  (57,  'Jacob Rasmussen',       27,  8,  3,  1),
+  (58,  'Rasmus Lauritsen',      29, 44,  3,  1),
+  (59,  'Stijn Spierings',       29, 45,  3,  5),
+  (60,  'Nicolai Vallys',        28, 46,  3,  1),
+  (61,  'Benjamin Tahirović',    22,115,  3, 34),
+  (62,  'Daniel Wass',           35,  2,  3,  1),
+  (63,  'Filip Bundgaard',       20, 14,  3,  1),
+  (64,  'Gavin Beavers',         19, 47,  3,  8),
+  (65,  'Thomas Mikkelsen',      41,115,  3,  1),
+  (66,  'Mileta Rajović',        25, 46,  3,  1),
+  (67,  'Marko Divković',        25, 48,  3, 10),
+  (68,  'Yuito Suzuki',          24, 49,  3, 22),
+  (69,  'Jordi Vanlerberghe',    28, 45,  3, 29),
+  (70,  'Sean Klaiber',          30, 38,  3,  5),
+  (71,  'Frederik Alves',        25, 14,  3,  1),
+  (72,  'Ludwig Vraa-Jensen',    19, 31,  3,  1),
+  (73,  'Noah Nartey',           19, 50,  3,  1),
+  (74,  'Mathias Kvistgaarden',  23, 14,  3,  1),
+  (75,  'Clement Bischoff',      19, 51,  3,  1),
+  (76,  'Lukas Larsen',          19, 46,  3,  1),
+  (77,  'Andreas Hansen',        29, 33,  5,  1),
+  (78,  'William Lykke',         20, 13,  5,  1),
+  (79,  'Duran Ferree',          18, 33,  5,  8),
+  (80,  'Tobias Salquist',       29, 33,  5,  1),
+  (81,  'Lucas Høgsberg',        18, 20,  5,  1),
+  (82,  'Kian Hansen',           27, 14,  5,  1),
+  (83,  'Erik Marxen',           34, 16,  5,  1),
+  (84,  'Stephen Acquah',        19,  2,  5,  4),
+  (85,  'Noah Markmann',         18,115,  5,  1),
+  (86,  'Juho Lähteenmäki',      18, 52,  5, 14),
+  (87,  'Issaka Seidu',          18,  2,  5,  4),
+  (88,  'Peter Ankersen',        34, 13,  5,  1),
+  (89,  'Mark Brink',            22, 16,  5,  1),
+  (90,  'Justin Janssen',        18,115,  5,  1),
+  (91,  'Mario Dorgeles',        20, 53,  5, 45),
+  (92,  'Zidan Sertdemir',       20, 54,  5,  1),
+  (93,  'Rocco Ascone',          21, 55,  5,  9),
+  (94,  'Araphat Mohammed',      19,115,  5,  4),
+  (95,  'Caleb Yirenkyi',        19,  2,  5,  4),
+  (96,  'Villum Berthelsen',     19, 14,  5,  1),
+  (97,  'Diallo Sanoussi',       18,115,  5, 45),
+  (98,  'Levy Nene',             19, 56,  5, 26),
+  (99,  'Prince Amoako Junior',  18,  2,  5,  4),
+  (100,  'Sindre Walle Egeli',   18, 57,  5,  3),
+  (101,  'Benjamin Nygren',      23, 22,  5,  2),
+  (102, 'Gustav Wikheim', 		 32, 115, 5,  3),
+  (103, 'Lucas Lund',            25, 58,  8,  1),
+  (104, 'Ivan Näsberg',          29, 59,  8,  3),
+  (105, 'Elias Andersson',       29, 24,  8,  2),
+  (106, 'Zan Zaletel',           25, 60,  8, 17),
+  (107, 'Mads Søndergaard',      22, 16,  8,  1),
+  (108, 'Serginho',              24, 61,  8, 13),
+  (109, 'Ibrahim Said',          22, 16,  8, 19),
+  (110, 'Isak Jensen',           21,  8,  8,  1),
+  (111, 'Renato Júnior',         22, 62,  8, 12),
+  (112, 'Thomas Jørgensen',      19,  2,  8,  1),
+  (113, 'Jeppe Grønning',        33, 33,  8,  1),
+  (114, 'Anosike Ementa',        23, 33,  8,  1),
+  (115, 'Asker Beck',            21, 63,  8,  1),
+  (116, 'Oscar Hedvall',         26, 13,  8,  1),
+  (117, 'Charly Nouck',          21, 64,  8,  1),
+  (118, 'Jean Manuel Mbom',      25, 38,  8,  7),
+  (119, 'Justin Lonwijk',        25, 65,  8, 37),
+  (120, 'Oliver Bundgaard',      23, 66,  8,  1),
+  (121, 'Daniel Anyembe',        26, 26,  8,  1),
+  (122, 'Hjalte Bidstrup',       19, 67,  8,  1),
+  (123, 'Yonis Njoh',            21, 68,  8,  9),
+  (124, 'Srdjan Kuzmić',         21, 60,  8, 17),
+  (125, 'Lukas Kirkegaard',      19, 16,  8,  1),
+  (126, 'Jakob Vester',          20, 16,  8,  1),
+  (127, 'Stipe Radić',           24,115,  8, 10),
+  (128, 'Leopold Wahlstedt',      25, 44,  6,  2),
+  (129, 'Jesper Hansen',          40, 31,  6,  1),
+  (130, 'Jonathan Hutters',       21, 16,  6,  1),
+  (131, 'Jonas Jensen-Abbew',     23,115,  6,  1),
+  (132, 'Tobias Mölgaard',        28, 16,  6,  1),
+  (133, 'Frederik Tingager',      32, 16,  6,  1),
+  (134, 'Henrik Dalsgaard',       35, 13,  6,  1),
+  (135, 'Michael Akoto',          27,115,  6,  7),
+  (136, 'Eric Kahl',              23, 22,  6,  2),
+  (137, 'Felix Beijmo',           27, 22,  6,  2),
+  (138, 'Jacob Andersen',         21, 69,  6,  1),
+  (139, 'Nicolai Poulsen',        34, 33,  6,  1),
+  (140, 'Kristian Arnstad',       21, 57,  6,  3),
+  (141, 'Mads Emil Madsen',       27, 14,  6,  1),
+  (142, 'Mikael Anderson',        26, 14,  6,  6),
+  (143, 'Frederik Brandhof',      28, 16,  6,  1),
+  (144, 'Gift Links',             26, 70,  6, 58),
+  (145, 'Tobias Bach',            21, 16,  6,  1),
+  (146, 'Kevin Yakob',            24, 71,  6,  2),
+  (147, 'Mikkel Duelund',         27, 72,  6,  1),
+  (148, 'Tobias Bech',            23, 31,  6,  1),
+  (149, 'Youssouph Badji',        23, 47,  6, 16),
+  (150, 'Patrick Mortensen',      35, 73,  6,  1),
+  (151, 'Nicolai Larsen',         31,  74,  7,  1),
+  (152, 'Aske Andrésen',          20,  26,  7,  1),
+  (153, 'Pedro Ganchas',          19,  75,  7, 13),
+  (154, 'Alexander Busch',        21,  33,  7,  1),
+  (155, 'Pontus Rödin',           24,  44,  7,  2),
+  (156, 'Alexander Madsen',       31,  76,  7,  1),
+  (157, 'Andreas Poulsen',        22,  31,  7,  1),
+  (158, 'Robin Østrøm',           21,  77,  7,  1),
+  (159, 'Jens Martin Gammelby',   28,  14,  7,  1),
+  (160, 'Jeppe Andersen',         28,  31,  7,  1),
+  (161, 'Anders Klynge',          22,  16,  7,  1),
+  (162, 'Pelle Mattsson',         24,  77,  7,  2),
+  (163, 'Mads Freundlich',        27,  78,  7,  1),
+  (164, 'Ramazan Orazov',         22,  79,  7, 43),
+  (165, 'Fredrik Carlsen',        37,  33,  7,  1),
+  (166, 'Oskar Boesen',           19,  14,  7,  1),
+  (167, 'Sofus Berger',           26,  16,  7,  1),
+  (168, 'Mads Larsen',            22,  77,  7,  1),
+  (169, 'Younes Bakiz',           19,  16,  7,  2),
+  (170, 'Callum McCowatt',        23,  13,  7, 27),
+  (171, 'Tonni Adamsen',          19, 115,  7,  1),
+  (172, 'Alexander Simmelhack',   21,  33,  7,  1),
+  (173, 'Vincent Müller',         24,  80, 11,  7),
+  (174, 'Oumar Diakhite',         31,  81, 11, 16),
+  (175, 'Lars Kramer',            25,  20, 11,  5),
+  (176, 'Marc Nielsen',           23,  33, 11,  1),
+  (177, 'Mylian Jiménez',         22,  82, 11,  5),
+  (178, 'Melker Widell',          23,  83, 11,  2),
+  (179, 'Nicklas Helenius',       34,  16, 11,  1),
+  (180, 'Oliver Ross',            20,  16, 11,  1),
+  (181, 'Mathias Jørgensen',      34,  58, 11,  1),
+  (182, 'Bjarne Pudel',           23, 115, 11,  7),
+  (183, 'Andreas Bruus',          26,  46, 11,  1),
+  (184, 'Kasper Davidsen',        20,  33, 11,  1),
+  (185, 'Andres Jasson',          23,  47, 11,  8),
+  (186, 'Aaron Seydel',           29,  84, 11,  7),
+  (187, 'Kasper Jörgensen',       25,  14, 11,  1),
+  (188, 'Mads Bomholt',           19,  14, 11,  1),
+  (189, 'Rody de Boer',           27,  82, 11,  5),
+  (190, 'Isak Hansen-Aarøen',     20,  43, 11,  3),
+  (191, 'Nóel Atli Arnórsson',    18,   2, 11,  6),
+  (192, 'Travis Hernes',          19,  85, 11,  3),
+  (193, 'Kelvin John',            21,   2, 11, 52),
+  (194, 'Valdemar Møller',        17,  86, 11,  1),
+  (195, 'Anders Noshe',           19,  33, 11,  1),
+  (196, 'Elison Makolli',         20,  83, 11,  2),
+  (197, 'Amar Diagne',            19,  33, 11,  1),
+  (198, 'Paul Izzo',              30, 87, 4, 11),
+  (199, 'Oskar Snorre',           26, 33, 4,  1),
+  (200, 'Emmanuel Ogura',         22,115, 4,  4),
+  (201, 'Wessel Dammers',         30, 72, 4,  5),
+  (202, 'Sabil Hansen',           19, 33, 4,  1),
+  (203, 'Daniel Høegh',           34, 13, 4,  1),
+  (204, 'Oliver Jones',           22, 88, 4,  1),
+  (205, 'Christian Østergaard',   19, 66, 4,  1),
+  (206, 'Nikolas Dyhr',           23, 45, 4,  1),
+  (207, 'Oliver Olsen',           24, 31, 4,  1),
+  (208, 'Björn Kopplin',          36, 63, 4,  7),
+  (209, 'André Römer',            31, 26, 4,  7),
+  (210, 'John Björkengren',       26, 89, 4,  2),
+  (211, 'Frederik Lauenborg',     27, 26, 4,  1),
+  (212, 'Laurits Pedersen',       19, 45, 4,  1),
+  (213, 'Simen Nordli',           25, 90, 4,  3),
+  (214, 'Noah Shamoun',           22, 91, 4,  1),
+  (215, 'Mike Themsen',           19,115, 4,  1),
+  (216, 'Hakim Sulemana',         20,115, 4,  4),
+  (217, 'Norman Campbell',        25, 92, 4, 50),
+  (218, 'Mathias Greve',          30, 16, 4,  1),
+  (219, 'Elies Mahmoud',          24,115, 4,  9),
+  (220, 'Stephen Odey',           27, 51, 4, 19),
+  (221, 'Mohamed Touré',          21, 47, 4, 16),
+  (222, 'Florian Danho',          24, 93, 4, 45),
+  (223, 'Musa Touré',             19,115, 4, 16),
+  (224, 'Igor Vekic',            27, 94, 12,  1),
+  (225, 'Thomas Gundelund',      23, 95, 12,  1),
+  (226, 'Miiko Albornoz',         34, 96, 12,  2),
+  (227, 'Hamza Barry',            30, 97, 12, 21),
+  (228, 'Yeni Ngbakoto',          33, 97, 12, 53),
+  (229, 'Tobias Lauritsen',       27, 77, 12,  1),
+  (230, 'Jelle Duin',             26, 47, 12,  5),
+  (231, 'Kristian Kirkegaard',    27, 88, 12,  1),
+  (232, 'Musa Juwara',            23, 98, 12, 21),
+  (233, 'Stefan Velkov',          28, 99, 12, 57),
+  (234, 'Damian van Bruggen',     29,100, 12,  5),
+  (235, 'Andreas Tomaselli',      19, 76, 12,  1),
+  (236, 'Dimitris Emmanouilidis', 24,101, 12, 24),
+  (237, 'Anders Jacobsen',        35,115, 12,  1),
+  (238, 'Anders Sønderskov',      19, 13, 12,  1),
+  (239, 'Lasse Flø',              19, 63, 12,  1),
+  (240, 'Tobias Jakobsen',        21, 17, 12,  1),
+  (241, 'Luka Hujber',            25,102, 12, 17),
+  (242, 'Richard Jensen',         29,103, 12,  1),
+  (243, 'Emmanuel Yeboah',        22,104, 12,  4),
+  (244, 'Lundrim Hetemi',         25,115, 12, 15),
+  (245, 'Christian Gammelgaard',  22,13,  12,  1),
+  (246, 'David Colina',           24,88,  12,  1),
+  (247, 'German Onugkha',         28,105, 12, 19),
+  (248, 'Marius Elvius',          22,106, 12,  1),
+  (249, 'Masaki Murata',          25,107, 12, 22),
+  (250, 'Gustav Knudsen',         18,108, 12,  1),
+  (251, 'Oskar Buur',             27, 63, 10, 1),
+  (252, 'Brian Hämäläinen',       35, 13, 10, 1),
+  (253, 'Baptiste Rolland',       22, 46, 10, 9),
+  (254, 'Lucas Lissens',          23, 45, 10, 29),
+  (255, 'Rasmus Thelander',       33,115, 10, 1),
+  (256, 'Mathias Hebo',           29, 33, 10, 1),
+  (257, 'Malik Abubakari',        24,115, 10, 4),
+  (258, 'Magnus Warming',         24, 13, 10, 1),
+  (259, 'Magnus Jensen',          28, 14, 10, 1),
+  (260, 'Casper Winther',         22, 12, 10, 1),
+  (261, 'Lauge Sandgrav',         20, 33, 10, 1),
+  (262, 'Michael Opoku',          19,106, 10, 4),
+  (263, 'Jonathan Amon',          26,107, 10, 8),
+  (264, 'Gustav Fraulo',          20, 26, 10, 1),
+  (265, 'Jesper Cornelius',       23, 33, 10, 1),
+  (266, 'Leon Klassen',           24,108, 10, 1),
+  (267, 'Sævar Atli Magnússon',   24,  2, 10, 6),
+  (268, 'Peter Langhoff',         21,109, 10, 1),
+  (269, 'Tobias Storm',           20, 14, 10, 1),
+  (270, 'Frederik Gytkjær',       32,115, 10, 1),
+  (271, 'Adam Vendelbo',          22, 76, 10, 1),
+  (272, 'Nikolai Baden Frederiksen',  24, 33, 10, 1),
+  (273, 'Jonas Krumrey',          21, 54, 10, 7),
+  (274, 'Jannich Storch',         31, 66, 10, 1),
+  (275, 'Jonathan Ægidius',       23, 22, 10, 1),
+  (276, 'Nicolai Flø',            29, 115,  9,  1),
+  (277, 'Marcus Bundgaard',       23,  26,  9,  1),
+  (278, 'Benicio Peña',           22, 115,  9,  1),
+  (279, 'Maxime Soulas',          25, 110,  9,  9),
+  (280, 'Daníel Leó Grétarsson',  29,   2,  9,  6),
+  (281, 'Matti Olsen',            29,  69,  9,  1),
+  (282, 'Marc Dal Hende',         34, 115,  9,  1),
+  (283, 'Gustav Wagner',          19,  33,  9,  1),
+  (284, 'Ebube Duru',             25, 111,  9, 19),
+  (285, 'Dalton Wilkins',         26,  13,  9, 27),
+  (286, 'Tobias Klysner',         23,  66,  9,  1),
+  (287, 'Andreas Oggesen',        31, 115,  9,  1),
+  (288, 'Simon Waever',           29, 115,  9,  1),
+  (289, 'Rasmus Vinderslev',      27,  16,  9,  1),
+  (290, 'Tobias Sommer',          23,  14,  9,  1),
+  (291, 'Mohamed Cherif Haidara', 19, 115,  9, 26),
+  (292, 'Sefer Emini',            24,  53,  9, 15),
+  (293, 'Lukas Björklund',        21,  24,  9,  2),
+  (294, 'Anders Bergholt',        19, 115,  9,  1),
+  (295, 'Kristall Máni Ingason',  23,   2,  9,  6),
+  (296, 'José Gallegos',          23, 112,  9,  8),
+  (297, 'Alexander Lyng',         20,  46,  9,  1),
+  (298, 'Olti Hyseni',            17,  86,  9,  1),
+  (299, 'Lirim Qamili',           26,  89,  9, 15),
+  (300, 'Mads Agger',             25,  16,  9,  1),
+  (301, 'Matthew Hoppe',          24, 113,  9,  8),
+  (302, 'Ivan Djantou',           23, 114,  9, 49);
+  SELECT * FROM Fodboldspiller;
+
+
+
+-- 9)FODBOLDSPILLER_POSITION
+CREATE TABLE SpillerSom (
+ fId    INT NOT NULL,
+ poId    INT NOT NULL,
+ PRIMARY KEY(fId,poId),
+ 
+  FOREIGN KEY (fId) REFERENCES Fodboldspiller(fId),
+  FOREIGN KEY (poId)  REFERENCES Position(poId)
+  );
+INSERT INTO SpillerSom (fId, poId) VALUES
+-- FC København
+(1, 1),(2, 1),(3, 1),                  -- Diant Ramaj, Nathan Trott, Rúnar Alex Rúnarsson = Målmand
+(4, 4),(5, 4),(6, 4),(7, 4),(8, 4),      -- Gabriel Pereira, Kevin Diks*, Pantelis Hatzidiakos, Munashe Garananga, Nicolai Boilesen = Midterforsvarer
+(5, 3),(5, 2),                          -- Kevin Diks = Venstre back, Højre back
+(9, 3),(10, 3),                        -- Birger Meling, Marcos López = Venstre back
+(11, 2),(12, 2),                       -- Rodrigo Huescas, Giorgi Gocholeishvili = Højre back
+(13, 7),(13, 8),(14, 7),(14, 8),       -- William Clem, Lukas Lerager = Defensiv + Central midtbane
+(15, 8),(15, 10),(15, 9),              -- Victor Froholdt = Central midtbane, Højre midtbane, Offensiv midtbane
+(16, 7),(16, 8),                       -- Thomas Delaney = Defensiv + Central midtbane
+(17, 7),(17, 8),(17, 9),               -- Rasmus Falk = Defensiv, Central, Offensiv midtbane
+(18, 11),(18, 8),(18, 9),              -- Oliver Højer = Venstre midtbane, Central, Offensiv midtbane
+(19, 8),(19, 7),(19, 9),               -- Hunor Németh = Central, Defensiv, Offensiv midtbane
+(20,13),									 -- Elias Achouri
+(21, 11),(21, 13),                     -- Robert = Venstre midtbane, Venstre winger
+(22, 10),(22, 12),                     -- Roony Bardghji = Højre midtbane, Højre winger
+(23, 10),(23, 11),(23, 12),            -- Mohamed Elyounoussi = Højre midtbane, Venstre midtbane, Højre winger
+(24, 10),(24, 15),(24, 12),            -- Jordan Larsson = Højre midtbane, Angriber, Højre winger
+(25, 9),(25, 8),                       -- Magnus Mattsson = Offensiv, Central midtbane
+(26, 9),(26, 8),(26, 15),              -- Viktor Claesson = Offensiv, Central midtbane, Angriber
+(27, 15),(28, 15),                     -- Andreas Cornelius, Amin Chiakha = Angriber
+
+-- FC Midtjylland
+(29, 1),(30, 1),(31, 1),               -- Elías Ólafsson, Jonas Lössl, Ovie Ejeheri = Målmand
+(32, 4),(33, 4),(34, 4),               -- Ousmane Diao, Mads Bech Sørensen, Han-beom Lee = Midterforsvarer
+(35, 3),(36, 3),                       -- Paulinho, Victor Bak = Venstre back
+(37, 4),                              -- Christian Sørensen = Midterforsvarer
+(38, 2),                              -- Kevin Mbabu = Højre back
+(39, 2),(39, 3),                      -- Joel Andersson = Højre back, Venstre back
+(40, 2),                              -- Adam Gabriel = Højre back
+(41, 7),(41, 8),                      -- Dani Silva = Defensiv + Central midtbane
+(42, 7),(42, 8),(42, 9),              -- Oliver Sørensen = Defensiv, Central, Offensiv midtbane
+(43, 7),(43, 8),(43, 9),              -- Denil Castillo = Defensiv, Central, Offensiv midtbane
+(44, 7),(44, 8),(44, 9),              -- Pedro Bravo = Defensiv, Central, Offensiv midtbane
+(45, 11),(45, 13),                    -- Aral Şimşir = Venstre midtbane, Venstre winger
+(46, 11),(46, 13),                    -- Mikel Gogorza = Venstre midtbane, Venstre winger
+(47, 13),(47, 12),(47, 14),   -- Obule Moses = Venstre wing, højre wing, centreforward
+(48, 12),(48, 10),                    -- Darío Osorio = Højre winger, Højre midtbane
+(49, 13),(49, 15),                    -- Edward Chilufya = Venstre winger, Angriber
+(50, 13),(50, 15),                    -- Marrony = Venstre winger, Angriber
+(51, 12),(51, 10),(51, 13),           -- Valdemar Byskov = Højre winger, Højre midtbane, Venstre winger
+(52, 15),(53, 15),(54, 15),           -- Franculino, Adam Buksa, Gue-sung Cho = Angriber
+
+-- Brøndby IF
+(55, 1),                             -- Patrick Pentz = Målmand
+(56, 2),(56,10),						 -- Sebastian Sebulsonsen = Højre back, højre midtbane
+(57, 4),                             -- Jacob Rasmussen = Midterforsvarer
+(58, 4),                             -- Rasmus Lauritsen = Midterforsvarer
+(59, 7),(59, 8),                     -- Stijn Spierings = Defensiv + Central midtbane
+(60, 9),(60, 8),(60, 13),            -- Nicolai Vallys = Offensiv, Central midtbane, Venstre winger
+(61, 7),(61, 8),                     -- Benjamin Tahirović = Defensiv + Central midtbane
+(62, 7),(62, 8),(62, 9),             -- Daniel Wass = Defensiv, Central, Offensiv midtbane
+(63, 15),                           -- Filip Bundgaard = Angriber
+(64, 1),(65, 1),                     -- Gavin Beavers, Thomas Mikkelsen = Målmand
+(66, 15),                           -- Mileta Rajović = Angriber
+(67, 3),(67, 11),                    -- Marko Divković = Venstre back, Venstre midtbane
+(68, 9),(68, 8),(68, 15),            -- Yuito Suzuki = Offensiv, Central midtbane, Angriber
+(69, 4),(69, 7),                     -- Jordi Vanlerberghe = Midterforsvarer, Defensiv midtbane
+(70, 4),(70, 2),                     -- Sean Klaiber = Midterforsvarer, Højre back
+(71, 4),(72, 4),                     -- Frederik Alves, Ludwig Vraa-Jensen = Midterforsvarer
+(73, 8),(73, 9),                     -- Noah Nartey = Central, Offensiv midtbane
+(74, 15),(74, 12),                   -- Mathias Kvistgaarden = Angriber, Højre winger
+(75, 3),(75, 11),(75, 13),           -- Clement Bischoff = Venstre back, Venstre midtbane, Venstre winger
+(76,3),										--Lukas Larsen = venstre back
+
+-- FC Nordsjælland
+(77, 4),(80, 4),(81, 4),(82, 3),(83, 4),  -- Andreas Hansen, Tobias Salquist, Lucas Høgsberg, Kian Hansen, Erik Marxen = Center backs / Venstre back
+(78, 1),(79, 1),                         -- William Lykke, Duran Ferree = Målmand
+(84, 4),(85, 4),                         -- Stephen Acquah, Noah Markmann = Center back
+(86, 11),(86, 13),(86, 12),              -- Juho Lähteenmäki = Venstre back, Venstre winger, Højre winger
+(87, 3),(88, 2),                         -- Issaka Seidu = Venstre back; Peter Ankersen = Højre back
+(89, 8),(89, 7),                         -- Mark Brink = Central midtbane, Defensiv midtbane
+(90, 4),(90, 7),(90, 9),                 -- Justin Janssen = Center back, Defensiv midtbane, Offensiv midtbane
+(91, 8),(91, 9),                         -- Mario Dorgeles = Central + Offensiv midtbane
+(92, 4),(92, 7),(92, 9),                 -- Zidan Sertdemir = Center back, Defensiv midtbane, Offensiv midtbane
+(93, 8),(93, 7),(93, 9),				-- Rocco Ascone = Center Midtbane, 
+(94, 4),(94, 7),(94, 9),                 -- Araphat Mohammed
+(95, 4),(95, 7),(95, 9),                 -- Caleb Yirenkyi
+(96, 4),(96, 7),(96, 9),                 -- Villum Berthelsen
+(97, 4),(97, 7),(97, 9),(97, 12),         -- Diallo Sanoussi = Defensiv, Central, Offensiv midtbane, Højre winger
+(98, 13),(98, 8),(98, 12),               -- Gustav Wikheim = Venstre winger, Central midtbane, Højre winger
+(99, 15),(100, 12),(100, 13),            -- Levy Nene; Prince Amoako Junior = Venstre winger, Sindre Walle Egeli = Venstre winger, Højre winger, Højre midtbane
+(101, 12),(101, 13),                     -- Benjamin Nygren = Højre winger, Venstre winger
+(102, 13),(102,12),(102,15),   --Gustav Wikheim = Venstre winger, højre winger, angriber
+
+-- Viborg FF
+(103, 1),(104, 4),(105, 3),(106, 4),     -- Lucas Lund, Ivan Näsberg, Elias Andersson, Zan Zaletel
+(107, 7),(107, 8),(107, 9),               -- Mads Søndergaard = Defensiv, Central, Offensiv midtbane
+(108, 12),(108, 10),                     -- Serginho = Højre winger, Højre midtbane
+(109, 12),(109, 11),                     -- Ibrahim Said = Højre winger, Venstre winger
+(110, 13),(110, 11),                     -- Isak Jensen = Venstre winger, Venstre midtbane
+(111, 15),                              -- Renato Júnior = Angriber
+(112, 8),(112, 9),                       -- Thomas Jørgensen = Central, Offensiv midtbane
+(113, 7),(113, 8),                       -- Jeppe Grønning = Defensiv, Central midtbane
+(114, 15),(115, 8),                     -- Anosike Ementa = Angriber; Asker Beck = Central midtbane
+(116, 1),(117, 13),(117, 11),(117, 12), -- Oscar Hedvall; Charly Nouck = Venstre winger, Central midtbane, Højre winger
+(118, 2),(118, 7),(118, 8),             -- Jean Manuel Mbom = Højre back, Defensiv, Central midtbane
+(119, 9),(119, 8),                      -- Justin Lonwijk = Offensiv, Central midtbane
+(120, 3),                              -- Oliver Bundgaard = Venstre back
+(121, 4),(121, 3),(121, 2),             -- Daniel Anyembe = Center back, Venstre back, Højre back
+(122, 2),                              -- Hjalte Bidstrup = Højre back
+(123, 15),(123, 11),                    -- Yonis Njoh = Angriber, Venstre midtbane
+(124, 2),(124, 3),                      -- Srdjan Kuzmić = Højre back, Venstre back
+(125, 8),                              -- Lukas Kirkegaard = Central midtbane
+(126, 8),(126, 9),(126, 12),            -- Jakob Vester = Central, Offensiv midtbane, Højre winger
+(127, 4),                              -- Stipe Radić = Midterforsvarer
+
+-- AGF (Århus)
+(128, 1),(129, 1),(130, 1),             -- Leopold Wahlstedt, Jesper Hansen, Jonathan Hutters = Målmand
+(131, 4),(132, 4),(133, 4),             -- Jonas Jensen-Abbew, Tobias Mölgaard, Frederik Tingager = Midterforsvarer
+(134, 4),(135, 4),                      -- Henrik Dalsgaard, Michael Akoto = Midterforsvarer
+(136, 3),(136, 4),(137, 2),(137, 4),    -- Eric Kahl = Venstre back + Midterforsvarer; Felix Beijmo = Højre back + Midterforsvarer
+(138, 2),                              -- Jacob Andersen = Højre back
+(139, 7),(139, 8),                      -- Nicolai Poulsen = Defensiv + Central midtbane
+(140, 7),(140, 8),(140, 9),             -- Kristian Arnstad = Defensiv, Central, Offensiv midtbane
+(141, 7),(141, 8),(141, 9),             -- Mads Emil Madsen = Defensiv, Central, Offensiv midtbane
+(142, 11),(142, 8),(142, 9),            -- Mikael Anderson = Venstre midtbane, Central, Offensiv midtbane
+(143, 7),(143, 8),(143, 9),             -- Frederik Brandhof = Defensiv, Central, Offensiv midtbane
+(144, 3),(144, 11),(144, 13),           -- Gift Links = Venstre back, Venstre midtbane, Venstre winger
+(145, 3),(145, 11),(145, 13),           -- Tobias Bach = samme som over
+(146, 7),(146, 8),(146, 9),             -- Kevin Yakob = Defensiv, Central, Offensiv midtbane
+(147, 8),(147, 9),                      -- Mikkel Duelund = Central, Offensiv midtbane
+(148, 15),(149, 15),(150, 15),          -- Tobias Bech, Youssouph Badji, Patrick Mortensen = Angriber
+
+-- Silkeborg IF
+(151, 1),(152, 1),                      -- Nicolai Larsen, Aske Andrésen = Målmand
+(153, 4),(154, 4),(155, 4),(156, 4),    -- Pedro Ganchas, Alexander Busch, Pontus Rödin, Alexander Madsen = Midterforsvarer
+(157, 3),(158, 3),(158, 2),             -- Andreas Poulsen = Venstre back; Robin Østrøm = Venstre back, Højre back
+(159, 2),                              -- Jens Martin Gammelby = Højre back
+ (160,  7),(160, 8),						-- Jeppe Andersen= defensiv midtbane, Central midtbane 
+(161, 15),(161, 9),                     -- Anders Klynge = Center + Offensiv midtbane
+(162, 7),(162, 8),                      -- Pelle Mattsson = Defensiv + Central midtbane
+(163, 7),(163, 8),(163, 9),             -- Mads Freundlich = Defensiv, Central, Offensiv midtbane
+(164, 7),(164, 8),(164, 9),             -- Ramazan Orazov = Defensiv, Central, Offensiv midtbane
+(165, 8),(165, 9),                      -- Fredrik Carlsen = Central, Offensiv midtbane
+(166, 11),(166, 8),(166, 12),           -- Oskar Boesen = Venstre midtbane, Central, Højre midtbane
+(167, 8),(167, 9),(167, 12),            -- Sofus Berger = Central, Offensiv, Højre winger
+(168, 8),(168, 9),                      -- Mads Larsen = Central, Offensiv midtbane
+(169, 11),(169, 13),(169, 9),           -- Younes Bakiz = Venstre midtbane, Venstre winger, Central offensiv midtbane
+(170, 8),(170, 11),(170, 9),            -- Callum McCowatt = Central, Venstre midtbane, Offensiv midtbane
+(171, 9),                              -- Tonni Adamsen = Offensiv midtbane
+(172, 15),                              -- Alexander Simmelhack = Angriber
+
+
+-- Aalborg BK
+(173, 1),(174, 4),(175, 4),(176, 3),    -- Vincent Müller, Oumar Diakhite, Lars Kramer, Marc Nielsen = målmand/backs
+(177, 7),(177, 8),                      -- Mylian Jiménez = Defensiv + Central midtbane
+(178, 9),(178, 8),                      -- Melker Widell = Offensiv + Central midtbane
+(179, 15),(180, 9),(180, 8),            -- Nicklas Helenius; Oliver Ross = Central, Offensiv midtbane
+(181, 13),(181, 12),(181, 15),          -- Mathias Jørgensen = Venstre + Højre winger, Angriber
+(182, 4),                              -- Bjarne Pudel = Midterforsvarer
+(183, 2),(183, 3),(183, 10),             -- Andreas Bruus = Højre back, Venstre back, Højre midtbane
+(184, 7),(184, 8),                      -- Kasper Davidsen = Defensiv + Central midtbane
+(185, 10),(185, 11),(185, 12),          -- Andres Jasson = Højre, Venstre midtbane, Højre winger
+(186, 15), -- Aaron Seydel: Angriber
+(187, 13), -- Kasper Jørgensen: Venstre winger
+(187, 15), -- Kasper Jørgensen: Angriber
+(188, 8),  -- Mads Bomholt: Central midtbanespiller
+(188, 9),  -- Mads Bomholt: Offensiv midtbanespiller
+(189, 1),  -- Rody de Boer: Målmand
+(190, 9),  -- Isak Hansen-Aarøen: Offensiv midtbanespiller
+(190, 15), -- Isak Hansen-Aarøen: Angriber
+(191, 4),  -- Nóel Atli Arnórsson: Midterforsvarer
+(191, 3),  -- Nóel Atli Arnórsson: Venstre back
+(192, 7),  -- Travis Hernes: Defensiv midtbanespiller
+(192, 8),  -- Travis Hernes: Central midtbanespiller
+(192, 9),  -- Travis Hernes: Offensiv midtbanespiller
+(193, 12), -- Kelvin John: Højre winger
+(193, 10), -- Kelvin John: Højre midtbanespiller
+(194, 7),  -- Valdemar Møller: Defensiv midtbanespiller
+(194, 8),  -- Valdemar Møller: Central midtbanespiller
+(194, 9),  -- Valdemar Møller: Offensiv midtbanespiller
+(195, 12), -- Anders Noshe: (Højre Wing)
+(195, 13), -- Anders Noshe: (Venstre Wing)
+(195, 2), -- Anders Noshe: (Højre back)
+(196,  4), -- Elison Makolli: (Cemter back)
+(196,  2), -- Elison Makolli: (Højre back)
+(197, 11), -- Amar Diagne: Venstre midtbanespiller
+
+--Randers fc
+  (198, 1),  -- Paul Izzo = Målmand
+  (199, 1),  -- Oskar Snorre = Målmand
+  (200, 1),  -- Emmanuel Ogura = Målmand
+  (201, 4),  -- Wessel Dammers = Midterforsvarer
+  (202, 2),(202, 4),(202, 7),  -- Sabil Hansen = Højre back, Midterforsvarer, Defensiv midtbanespiller
+  (203, 4),  -- Daniel Høegh = Midterforsvarer
+  (204, 4),  -- Oliver Jones = Midterforsvarer
+  (205, 4),  -- Christian Østergaard = Midterforsvarer
+  (206, 3),  -- Nikolas Dyhr = Venstre back
+  (207, 2),  -- Oliver Olsen = Højre back
+  (208, 2),(208, 3),  -- Björn Kopplin = Højre back, Venstre back
+  (209, 7),(209, 8),  -- André Römer = Defensiv midtbanespiller, Central midtbanespiller
+  (210, 7),(210, 8),  -- John Björkengren = Defensiv midtbanespiller, Central midtbanespiller
+  (211, 8),(211, 11),(211, 3),  -- Frederik Lauenborg = Central midtbanespiller, Venstre midtbanespiller, Venstre back
+  (212, 7),(212, 8),  -- Laurits Pedersen = Defensiv midtbanespiller, Central midtbanespiller
+  (213, 11),(213, 13),  -- Simen Nordli = Venstre midtbanespiller, Venstre winger
+  (214, 11),(214, 10),(214, 13),  -- Noah Shamoun = Venstre midtbanespiller, Højre midtbanespiller, Venstre winger
+  (215, 11),(215, 10),(215, 9),  -- Mike Themsen = Venstre midtbanespiller, Højre midtbanespiller, Offensiv midtbanespiller
+  (216, 11),(216, 10),(216, 13),  -- Hakim Sulemana = Venstre midtbanespiller, Højre midtbanespiller, Venstre winger
+  (217, 10),(217, 12),  -- Norman Campbell = Højre midtbanespiller, Højre winger
+  (218, 10),(218, 8),  -- Mathias Greve = Højre midtbanespiller, Central midtbanespiller
+  (219, 10),(219, 12),(219, 11),  -- Elies Mahmoud = Højre midtbanespiller, Højre winger, Venstre midtbanespiller
+  (220, 15),  -- Stephen Odey = Angriber
+  (221, 15),  -- Mohamed Touré = Angriber
+  (222, 15),  -- Florian Danho = Angriber
+  (223, 15),  -- Musa Touré = Angriber
+  
+  -- Vejle Boldklub spiller-position
+  (224, 1),  -- Igor Vekić: Målmand
+  (225, 2),  -- Thomas Gundelund: Højre back
+  (225,10),  -- Thomas Gundelund: Højre midtbanespiller
+  (226, 3),  -- Miiko Albornoz: Venstre back
+  (227, 8),  -- Hamza Barry: Central midtbanespiller
+  (228,11),  -- Yeni Ngbakoto: Venstre midtbanespiller
+  (228,15),  -- Yeni Ngbakoto: Angriber
+  (228,10),  -- Yeni Ngbakoto: Højre midtbanespiller
+  (229, 8),  -- Tobias Lauritsen: Central midtbanespiller
+  (229,10),  -- Tobias Lauritsen: Højre midtbanespiller
+  (230,15),  -- Jelle Duin: Angriber
+  (231,11),  -- Kristian Kirkegaard: Venstre midtbanespiller
+  (231,10),  -- Kristian Kirkegaard: Højre midtbanespiller
+  (231, 9),  -- Kristian Kirkegaard: Offensiv midtbanespiller
+  (232,10),  -- Musa Juwara: Højre midtbanespiller
+  (233, 4),  -- Stefan Velkov: Midterforsvarer
+  (234, 4),  -- Damian van Bruggen: Midterforsvarer
+  (235, 4),  -- Andreas Tomaselli: Midterforsvarer
+  (236,11),  -- Dimitris Emmanouilidis: Venstre midtbanespiller
+  (236,10),  -- Dimitris Emmanouilidis: Højre midtbanespiller
+  (237,15),  -- Anders Jacobsen: Angriber
+  (238, 4),  -- Anders Sønderskov: Midterforsvarer
+  (239, 2),  -- Lasse Flø: Højre back
+  (240, 1),  -- Tobias Jakobsen: Målmand
+  (241, 2),  -- Luka Hujber: Højre back
+  (242, 4),  -- Richard Jensen: Midterforsvarer
+  (243,15),  -- Emmanuel Yeboah: Angriber
+  (243,12),  -- Emmanuel Yeboah: Højre winger
+  (244, 8),  -- Lundrim Hetemi: Central midtbanespiller
+  (245,10),  -- Christian Gammelgaard: Højre midtbanespiller
+  (245,15),  -- Christian Gammelgaard: Angriber
+  (246, 3),  -- David Colina: Venstre back
+  (246,11),  -- David Colina: Venstre midtbanespiller
+  (247,15),  -- German Onugkha: Angriber
+  (248, 2),  -- Marius Elvius: Højre back
+  (249, 8),  -- Masaki Murata: Central midtbanespiller
+  (250, 1),  -- Gustav Knudsen: Målmand
+  
+  -- Lyngby Boldklub spiller-position
+  (251, 2),  -- Oskar Buur: Højre back
+  (251, 10), -- Oskar Buur: Højre midtbanespiller
+  (252, 4),  -- Brian Hämäläinen: Midterforsvarer
+  (252, 3),  -- Brian Hämäläinen: Venstre back
+  (253, 4),  -- Baptiste Rolland: Midterforsvarer
+  (254, 4),  -- Lucas Lissens: Midterforsvarer
+  (255, 4),  -- Rasmus Thelander: Midterforsvarer
+  (256, 8),  -- Mathias Hebo: Central midtbanespiller
+  (257, 15), -- Malik Abubakari: Angriber
+  (258, 13), -- Magnus Warming: Venstre winger
+  (258, 11), -- Magnus Warming: Venstre midtbanespiller
+  (259, 4),  -- Magnus Jensen: Midterforsvarer
+  (259, 15), -- Magnus Jensen: Angriber
+  (260, 8),  -- Casper Winther: Central midtbanespiller
+  (261, 8),  -- Lauge Sandgrav: Central midtbanespiller
+  (262, 13), -- Michael Opoku: Venstre winger
+  (263, 13), -- Jonathan Amon: Venstre winger
+  (264, 8),  -- Gustav Fraulo: Central midtbanespiller
+  (265, 15), -- Jesper Cornelius: Angriber
+  (266, 3),  -- Leon Klassen: Venstre back
+  (266, 11), -- Leon Klassen: Venstre midtbanespiller
+  (267, 15), -- Sævar Atli Magnússon: Angriber
+  (267, 9),  -- Sævar Atli Magnússon: Offensiv midtbanespiller
+  (267, 8),  -- Sævar Atli Magnússon: Central midtbanespiller
+  (268, 8),  -- Peter Langhoff: Central midtbanespiller
+  (269, 2),  -- Tobias Storm: Højre back
+  (269, 10), -- Tobias Storm: Højre midtbanespiller
+  (270, 15), -- Frederik Gytkjær: Angriber
+  (271, 15), -- Adam Vendelbo: Angriber
+  (272, 15), -- Nikolai Baden Frederiksen: Angriber
+  (272, 9),  -- Nikolai Baden Frederiksen: Offensiv midtbanespiller
+  (273, 1),  -- Jonas Krumrey: Målmand
+  (274, 1),  -- Jannich Storch: Målmand
+  (275, 1), -- Jonathan Ægidius: Målmand
+ 
+ -- Sønderjyske spiller-position
+  (276, 1),   -- Nicolai Flø: Målmand
+  (277, 1),   -- Marcus Bundgaard: Målmand
+  (278, 1),   -- Benicio Peña: Målmand
+  (279, 4),   -- Maxime Soulas: Midterforsvarer
+  (280, 4),   -- Daníel Leó Grétarsson: Midterforsvarer
+  (281, 4),   -- Matti Olsen: Midterforsvarer
+  (282, 3),   -- Marc Dal Hende: Venstre back
+  (282, 11),  -- Marc Dal Hende: Venstre midtbanespiller
+  (283, 4),   -- Gustav Wagner: Midterforsvarer
+  (283, 2),   -- Gustav Wagner: Højre back
+  (284, 3),   -- Ebube Duru: Venstre back
+  (285, 3),   -- Dalton Wilkins: Venstre back
+  (285, 2),   -- Dalton Wilkins: Højre back
+  (286, 2),   -- Tobias Klysner: Højre back
+  (286, 10),  -- Tobias Klysner: Højre midtbanespiller
+  (287, 2),   -- Andreas Oggesen: Højre back
+  (287, 8),   -- Andreas Oggesen: Central midtbanespiller
+  (288, 2),   -- Simon Wæver: Højre back
+  (289, 7),   -- Rasmus Vinderslev: Defensiv midtbanespiller
+  (289, 8),   -- Rasmus Vinderslev: Central midtbanespiller
+  (290, 7),   -- Tobias Sommer: Defensiv midtbanespiller
+  (290, 4),   -- Tobias Sommer: Midterforsvarer
+  (291, 7),   -- Mohamed Cherif Haidara: Defensiv midtbanespiller
+  (291, 8),   -- Mohamed Cherif Haidara: Central midtbanespiller
+  (292, 8),   -- Sefer Emini: Central midtbanespiller
+  (293, 8),   -- Lukas Björklund: Central midtbanespiller
+  (293, 9),   -- Lukas Björklund: Offensiv midtbanespiller
+  (294, 8),   -- Anders Bergholt: Central midtbanespiller
+  (294, 13),  -- Anders Bergholt: Venstre winger
+  (295, 9),   -- Kristall Máni Ingason: Offensiv midtbanespiller
+  (295, 15),  -- Kristall Máni Ingason: Angriber
+  (296, 13),  -- José Gallegos: Venstre winger
+  (296, 9),   -- José Gallegos: Offensiv midtbanespiller
+  (297, 12),  -- Alexander Lyng: Højre winger
+  (297, 13),  -- Alexander Lyng: Venstre winger
+  (298, 13),  -- Olti Hyseni: Venstre winger
+  (299, 15),  -- Lirim Qamili: Angriber
+  (299, 12),  -- Lirim Qamili: Højre winger
+  (300, 13),  -- Mads Agger: Venstre winger
+  (300, 12),  -- Mads Agger: Højre winger
+  (301, 15),  -- Matthew Hoppe: Angriber
+  (301, 11),  -- Matthew Hoppe: Venstre midtbanespiller
+  (302, 15);  -- Ivan Djantou: Angriber
+  SELECT * FROM SpillerSom;
+
+	   
+
+
+
+
+-- 1) Ungt dansk talent: spillere, som er 21 eller under 21 år med dansk pas. Man kan bruge resultatet ved en transfer til klubben, hvor man filtrerer efter ungt dansk talent på 21 år eller under med dansk pas.
+
+SELECT
+  n.nNavn							 AS Nationalitet,
+  f.fNavn                            AS Spiller,
+  a.alNavn                           AS Alder,
+  k.kNavn                            AS Klub,
+  STRING_AGG(p.poNavn, ', ' ORDER BY p.poNavn) AS positioner
+FROM Fodboldspiller f
+JOIN Alder a       ON f.alId   = a.alId
+JOIN Nationalitet n ON f.nId  = n.nId
+JOIN Klub k        ON f.kId   = k.kId
+JOIN SpillerSom ss ON f.fId   = ss.fId
+JOIN Position p    ON ss.poId = p.poId
+WHERE CAST(a.alNavn AS INTEGER) <= 21
+  AND n.nNavn = 'Danmark'
+GROUP BY f.fNavn, a.alNavn, k.kNavn
+ORDER BY a.alNavn, f.fNavn;
+
+
+-- 2) Klub-statistik: antal spillere og gennemsnitsalder pr. klub. Når man starter karrieremode i NFL, kan man bruge hver klubs gennemsnitsalder og antal spillere ved trænerkarrierestart til at træffe sit klubvalg.
+
+SELECT
+  k.knavn                          AS Klub,
+  COUNT(*)                         AS Antal_spillere,
+  ROUND(AVG(CAST(al.alnavn AS NUMERIC)), 2) AS Gennemsnitsalder
+FROM fodboldspiller   f
+JOIN alder            al ON f.alid  = al.alid
+JOIN klub             k  ON f.kid   = k.kid
+GROUP BY k.knavn
+ORDER BY antal_spillere DESC;
+
+
+-- 3) Liste over fodboldspillernes agenter, hvis de har en, ellers markeret som “Ingen Agenter”. Dermed kan man se, hvilke spillere der er repræsenteret af hvilke agentfirmaer, så hvis man vil tranfere en spiller, kan man starte med at kontakte det pågældende agentfirma.
+
+SELECT
+  ag.aNavn                             AS Agent,
+  COUNT(*)                             AS Antal_spillere,
+  STRING_AGG(f.fNavn, ', ' ORDER BY f.fNavn) AS Spillere
+FROM Fodboldspiller f
+JOIN Agent ag ON f.aId = ag.aId
+GROUP BY ag.aNavn
+ORDER BY antal_spillere DESC;
